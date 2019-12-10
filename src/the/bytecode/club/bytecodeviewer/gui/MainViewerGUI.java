@@ -426,6 +426,10 @@ public class MainViewerGUI extends JFrame implements FileChangeNotifier
     public final JRadioButtonMenuItem jadxJ3 = new JRadioButtonMenuItem("Java");
     public final JCheckBoxMenuItem jadxE3 = new JCheckBoxMenuItem("Editable");
 
+    public final JRadioButtonMenuItem asmText1 = new JRadioButtonMenuItem("ASM Textify");
+    public final JRadioButtonMenuItem asmText2 = new JRadioButtonMenuItem("ASM Textify");
+    public final JRadioButtonMenuItem asmText3 = new JRadioButtonMenuItem("ASM Textify");
+
     private final JMenu mnFontSize = new JMenu("Font Size");
     private final JMenu visualSettings = new JMenu("Visual Settings");
     public final JSpinner fontSpinner = new JSpinner();
@@ -1761,15 +1765,15 @@ public class MainViewerGUI extends JFrame implements FileChangeNotifier
         mnNewMenu_7.add(mnCfr);
 
         jadx1.add(jadxJ1);
-        jadx1.add(separator_19);
+        jadx1.add(new JSeparator());
         jadx1.add(jadxE1);
 
         jadx2.add(jadxJ2);
-        jadx2.add(separator_19);
+        jadx2.add(new JSeparator());
         jadx2.add(jadxE2);
 
         jadx3.add(jadxJ3);
-        jadx3.add(separator_19);
+        jadx3.add(new JSeparator());
         jadx3.add(jadxE3);
 
         mnNewMenu_7.add(jadx1);
@@ -1824,6 +1828,8 @@ public class MainViewerGUI extends JFrame implements FileChangeNotifier
         mnNewMenu_7.add(panel1Bytecode);
 
         mnNewMenu_7.add(panel1Hexcode);
+
+        mnNewMenu_7.add(asmText1);
 
         mnNewMenu_6.add(mnPane);
 
@@ -1891,6 +1897,8 @@ public class MainViewerGUI extends JFrame implements FileChangeNotifier
 
         mnPane.add(panel2Hexcode);
 
+        mnPane.add(asmText2);
+
         mnNewMenu_6.add(mnPane_1);
 
         mnPane_1.add(panel3None);
@@ -1955,6 +1963,8 @@ public class MainViewerGUI extends JFrame implements FileChangeNotifier
         mnPane_1.add(panel3Bytecode);
 
         mnPane_1.add(panel3Hexcode);
+
+        mnPane_1.add(asmText3);
 
         compileOnSave.setSelected(false);
 
@@ -2535,6 +2545,7 @@ public class MainViewerGUI extends JFrame implements FileChangeNotifier
         panelGroup1.add(panel1Smali);
         panelGroup1.add(panel1Bytecode);
         panelGroup1.add(panel1Hexcode);
+        panelGroup1.add(asmText1);
 
         panelGroup2.add(panel2None);
         panelGroup2.add(panel2Proc);
@@ -2547,6 +2558,7 @@ public class MainViewerGUI extends JFrame implements FileChangeNotifier
         panelGroup2.add(panel2Smali);
         panelGroup2.add(panel2Bytecode);
         panelGroup2.add(panel2Hexcode);
+        panelGroup2.add(asmText2);
 
         panelGroup3.add(panel3None);
         panelGroup3.add(panel3Proc);
@@ -2559,6 +2571,7 @@ public class MainViewerGUI extends JFrame implements FileChangeNotifier
         panelGroup3.add(panel3Smali);
         panelGroup3.add(panel3Bytecode);
         panelGroup3.add(panel3Hexcode);
+        panelGroup3.add(asmText3);
 
         fontSpinner.setPreferredSize(new Dimension(42, 20));
         fontSpinner.setSize(new Dimension(42, 20));
